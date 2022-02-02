@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Huss33/Project_2_uofm#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^15.0.0",
