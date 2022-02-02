@@ -1,3 +1,4 @@
 DROP DATABASE IF EXISTS dnr_db;
 
 CREATE DATABASE dnr_db;
+USE dnr_db;
