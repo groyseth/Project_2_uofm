@@ -1,10 +1,11 @@
-// const { response } = require("express");
+var searchElements = document.querySelectorAll('.searchBtn');
+console.log(searchElements);
 
-var call = "sna02008";
 
-
-async function searchCityByInput() {
-    
+// console.log(ParkPointBtn);
+async function searchCityByInput(event) {
+    // console.log(event.target.value);
+    var call = event.target.value
     const response = await fetch("/api/dnr/"+call, {
         method: 'get',
        
@@ -14,6 +15,9 @@ async function searchCityByInput() {
         console.log(data);
     }
 }
-    // console.log('ok');
-searchCityByInput()
+
+for (let index = 0; index < searchElements.length; index++) {
+    console.log(searchElements[index]);
+    searchElements[index].addEventListener("click", searchCityByInput)
+}
 
