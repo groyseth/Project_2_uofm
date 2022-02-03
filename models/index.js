@@ -1,7 +1,7 @@
-const Dnr = require('./Dnr');
+// const Dnr = require('./Dnr');
 const User = require('./User');
 
 
 
 
-module.exports = { Dnr, User };
+module.exports = { User };
