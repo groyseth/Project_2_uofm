@@ -1,1 +1,1 @@
-const Dnr = require('./Dnr');
+const Dnr = require('./Favorite');

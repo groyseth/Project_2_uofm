@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Dnr extends Model {}
+class Favorite extends Model {}
 
-Dnr.init(
+Favorite.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,14 +18,21 @@ Dnr.init(
         key: 'id',
       },
     },
+    sna_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'sna',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dnr'
+    modelName: 'favorite'
   }
 );
 
-module.exports = Dnr;
+module.exports = Favorite;
