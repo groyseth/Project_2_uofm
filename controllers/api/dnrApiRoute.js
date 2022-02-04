@@ -23,6 +23,7 @@ router.get('/:id', (req, res) => {
         console.log(dnrData);
         // res.render(<index>, dnrData)
         res.render('content', dnrData)
+        // res.json(dnrData)
     }).catch(err => {
         // console.log(err);
         res.status(500).json(err)

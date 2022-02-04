@@ -5,14 +5,18 @@ console.log(searchElements);
 // console.log(ParkPointBtn);
 async function searchCityByInput(event) {
     // console.log(event.target.value);
-    var call = event.target.value
-    const response = await fetch("/api/dnr/"+call, {
-        method: 'get',
-       
-    });
-    if (response.ok) {
-        const data = await response.json()
-        console.log(data);
+    try {
+        var call = event.target.value
+        const response = await fetch("/api/dnr/" + call, {
+            method: 'get',
+
+        });
+        if (response.ok) {
+            const data = await response.json()
+            console.log(data);
+        }
+    } catch (err) {
+        console.log(err);
     }
 }
 
