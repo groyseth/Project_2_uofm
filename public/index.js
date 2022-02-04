@@ -1,4 +1,6 @@
-const { redirect } = require("express/lib/response");
+var fav = document.getElementById('listOfFav')
+
+var favElements = document.getElementById('favbtn')
 
 var searchElements = document.querySelectorAll('.searchBtn');
 console.log(searchElements);
@@ -29,3 +31,21 @@ for (let index = 0; index < searchElements.length; index++) {
 
 }
 
+renderHistory()
+function renderHistory() {
+fav.innerHTML = ""
+    // for (let i = 0; i < cityHistory.length; i++) {
+       
+        var list = document.createElement("li");
+        list.innerHTML = favElements
+        
+        list.addEventListener("click", function (e) {
+            console.log(e.target.textContent)
+            // favElements(e.target.textContent)
+        })
+        console.log(list);
+        
+        fav.appendChild(list);
+    // }
+    
+}
