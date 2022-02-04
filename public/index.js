@@ -1,3 +1,5 @@
+const { redirect } = require("express/lib/response");
+
 var searchElements = document.querySelectorAll('.searchBtn');
 console.log(searchElements);
 
@@ -14,6 +16,7 @@ async function searchCityByInput(event) {
         if (response.ok) {
             const data = await response.json()
             console.log(data);
+            
         }
     } catch (err) {
         console.log(err);
@@ -23,5 +26,6 @@ async function searchCityByInput(event) {
 for (let index = 0; index < searchElements.length; index++) {
     console.log(searchElements[index]);
     searchElements[index].addEventListener("click", searchCityByInput)
+
 }
 

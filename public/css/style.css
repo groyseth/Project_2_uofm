@@ -9,6 +9,12 @@
 }
 #jsnow {
     background-image: url("../images/MN\ Lakeview.jpg");
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
+    /* -webkit-background-composite: cover; */
+    background-size: cover;
+    
     
    }
+#visualTab{
+    height: 60%;
+}
