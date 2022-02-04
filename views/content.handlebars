@@ -1,0 +1,15 @@
+<div class="container bg-primary text-white">
+    
+<h1>Dnr data</h1>
+{{#each dnrData as |content|}}
+
+<div>
+
+<p1>SNA name:  {{content.sna_name}}</p1><br>
+<p1>SNA tags: {{content.sna_tags}}</p1><br>
+<p1>SNA description:  {{content.sna_description}}</p1><br>
+<p1>SNA notes:  {{content.sna_notes}}</p1><br>
+<p1>SNA id:  {{content.sna_id}}</p1>
+{{!-- {{format_date}} --}}
+</div>
+{{/each}}
