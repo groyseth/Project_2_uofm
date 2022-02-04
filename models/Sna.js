@@ -16,7 +16,7 @@ Sna.init(
             allowNull: false,
         },
         sna_tags: {
-            type: DataTypes.ARRAY,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         sna_description: {
@@ -28,13 +28,13 @@ Sna.init(
             allowNull: false,
         },
         sna_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },   
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: false, 
         freezeTableName: true,
         underscored: true,
         modelName: 'sna'
