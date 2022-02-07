@@ -1,12 +1,50 @@
-.jumboText{
+.jumboText {
     text-align: center;
     
 }
-.imageEd{
+
+.imageEd {
     width: 30%;
     height: 30%;
     object-fit: contain;
 }
+
+.container border border-secondary col-6 {
+    padding: 0;
+    margin: 2px;
+    float: right;
+}
+
+.container h1 {
+    color: royalblue;
+}
+
+.nav-item {
+    padding: 0;
+    margin: 0px 20px;
+}
+
+.nav-link:hover {
+    font-size: 150%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn:hover {
+    font-size: 150%;
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.searchBtn:hover {
+    font-size: 150%;
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.disabled-link {
+    pointer-events: none;
+}
+
 #jsnow {
     background-image: url("../images/MN\ Lakeview.jpg");
     /* background-color: #cccccc; */
@@ -15,6 +53,19 @@
     
     
    }
-#visualTab{
+
+#visualTab {
     height: 60%;
 }
+
+/* @media screen and (max-width: 767px) {
+    .hpContainer {
+        display: block;
+    }
+
+    .container border border-secondary float-right col-6 {
+        display: block;
+    }
+
+
+} */

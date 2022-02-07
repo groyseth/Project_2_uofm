@@ -1,5 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
+    console.log('hey')
   
     const email = document.querySelector('#username-input-login');
     const password = document.querySelector('#password-input-login');
@@ -13,7 +14,11 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         console.log(response);
-        document.location.replace('/');
+        var aTags = document.querySelectorAll('.disabled-link');
+        aTags.forEach(function(anchor){
+          anchor.classList.remove('disabled-link');
+        })
+        // document.location.replace('/');
       } else {
         alert('Failed to log in');
       }
@@ -22,5 +27,5 @@ const loginFormHandler = async (event) => {
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    .addEventListener('click', loginFormHandler);
   
