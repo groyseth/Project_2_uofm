@@ -20,6 +20,7 @@ router.get('/:id', (req, res) => {
             sna_description: response.data.result.description,
             
         }
+        
         console.log(dnrData);
         // res.render(<index>, dnrData)
         res.render('content', dnrData)
