@@ -31,21 +31,21 @@ for (let index = 0; index < searchElements.length; index++) {
 
 }
 
-renderHistory()
-function renderHistory() {
-fav.innerHTML = ""
-    // for (let i = 0; i < cityHistory.length; i++) {
+// renderHistory()
+// function renderHistory() {
+// fav.innerHTML = ""
+//     // for (let i = 0; i < cityHistory.length; i++) {
        
-        var list = document.createElement("li");
-        list.innerHTML = favElements
+//         var list = document.createElement("li");
+//         list.innerHTML = favElements
         
-        list.addEventListener("click", function (e) {
-            console.log(e.target.textContent)
-            // favElements(e.target.textContent)
-        })
-        console.log(list);
+//         list.addEventListener("click", function (e) {
+//             console.log(e.target.textContent)
+//             // favElements(e.target.textContent)
+//         })
+//         console.log(list);
         
-        fav.appendChild(list);
-    // }
+//         fav.appendChild(list);
+//     // }
     
-}
+// }

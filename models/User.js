@@ -30,7 +30,14 @@ User.init(
       validate: {
         len: [3]
       }
-    }
+    },
+    // password: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     len: [3]
+    //   }
+    // }
   },
   {
     hooks: {

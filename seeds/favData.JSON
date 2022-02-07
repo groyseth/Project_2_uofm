@@ -1,14 +1,14 @@
 [
 {
     "user_id": 1,
-    "sna_id": "sna1234"
+    "sna_id": 1
 },
 {
     "user_id": 2,
-    "sna_id": "sna2222"
+    "sna_id": 2
 },
 {
     "user_id": 3,
-    "sna_id":"sna6969"
+    "sna_id": 2
 }
 ]
