@@ -1,6 +1,6 @@
 // var fav = document.getElementById('listOfFav')
 
-// var favElements = document.getElementById('favbtn')
+var favElements = document.getElementById('favbtn');
 
 // var searchElements = document.querySelectorAll('.searchBtn');
 // console.log(searchElements);
@@ -15,10 +15,10 @@ const commentFormHandler = async function(event) {
     // var favElements = document.getElementById('favbtn')
   
     if (body) {
-      await fetch('/api/favorite/:id', {
+      await fetch('/api/favorite/', {
         method: 'POST',
         body: JSON.stringify({
-            user_id,
+          // user_id,
             sna_id
         }),
         headers: {
@@ -28,7 +28,7 @@ const commentFormHandler = async function(event) {
       
   
       // document.location.reload();
-      document.location.replace('/');
+      document.location.replace('/favorite');
     }
   };
   

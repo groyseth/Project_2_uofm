@@ -25,6 +25,9 @@ Favorite.init(
         key: 'id',
       },
     },
+    session_id:{
+    type: DataTypes.STRING
+  },
   },
   {
     sequelize,
