@@ -1,9 +1,13 @@
 
 const sequelize = require('../config/connection');
-const { User, Favorite } = require('../models');
+const { User, Favorite, Sna } = require('../models');
 
-const userData = require('./userData.JSON');
-const favData = require('./favData.JSON');
+const snaData = require('./snaData.json');
+const userData = require('./userData.json');
+const favData = require('./favData.json');
+
+
+
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -12,11 +16,16 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  
+  await Sna.bulkCreate(snaData, {
+    individualHooks: true,
+    returning: true,
+  });
+  
   await Favorite.bulkCreate(favData, {
     individualHooks: true,
     returning: true,
   });
-
   process.exit(0);
 };
 

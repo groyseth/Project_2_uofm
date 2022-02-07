@@ -40,5 +40,5 @@ Sna.init(
         modelName: 'sna'
     }
 );
-
+// create sna seeds and it wants to find the sna id where it matches the user id
 module.exports = Sna;
