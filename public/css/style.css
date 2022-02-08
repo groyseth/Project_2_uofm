@@ -45,6 +45,14 @@
     pointer-events: none;
 }
 
+.hide {
+    display: none; 
+}
+
+.myDIV:hover + .hide {
+    display: block;
+}
+
 #jsnow {
     background-image: url("../images/MN\ Lakeview.jpg");
     /* background-color: #cccccc; */

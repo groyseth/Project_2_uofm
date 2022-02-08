@@ -12,7 +12,7 @@
 
   <div class="jumbotron container-fluid jumboText" id="jsnow">
   <h1 class="display-4">DNR RESOURCE SITE</h1>
-  <p class="lead">This is a simple unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  {{!-- <p class="lead">This is a simple unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> --}}
   <hr class="my-4">
   <p>You will be able to locate information about scientific and natural areas.</p>
   {{!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> --}}
@@ -32,13 +32,11 @@
     <button class="nav-link active" id="profile-tab visualTab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Favorites</button>
   </a>
   </li>
-  {{#if logged_in}}
   <li class="nav-item" role="presentation">
     <a href="/">
     <button class="nav-link active" id="messages-tab visualTab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Logout</button>
     </a>
   </li>
-  {{/if}}
   <li class="nav-item" role="presentation">
     <a href="/resources">
     <button class="nav-link active" id="settings-tab visualTab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Resources</button>
