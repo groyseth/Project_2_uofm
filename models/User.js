@@ -50,15 +50,15 @@ User.init(
             return err;
           }
         },
-        beforeUpdate: async (updatedUserData) => {
-          try {
-            updatedUserData.password = await bcrypt.hash(updatedUserData.password,10);
-            return updatedUserData;
-          } catch (err) {
-            console.log(err);
-            return err;
-          }
-        },
+        // beforeUpdate: async (updatedUserData) => {
+        //   try {
+        //     updatedUserData.password = await bcrypt.hash(updatedUserData.password,10);
+        //     return updatedUserData;
+        //   } catch (err) {
+        //     console.log(err);
+        //     return err;
+        //   }
+        // },
       },
     sequelize,
     timestamps: false,

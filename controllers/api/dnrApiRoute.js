@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const { Dnr } = require('../../models');
 const axios = require('axios');
+const withAuth = require('../../utils/auth')
 // const call = require('./index')
 // const res = require('express/lib/response');
 // const { response } = require('express');
 
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
 
     axios.get('http://services.dnr.state.mn.us/api/sna/detail/v1?id='+req.params.id)
     .then(response => {

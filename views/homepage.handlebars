@@ -4,8 +4,17 @@
       DNR non belivers not welcome
     </h2>
   </div> --}}
-  <container class="hpContainer">
-  <form class="float-left">
+  <container class="hpContainer" data-loggedin="{{logged_In}}">
+    
+
+     {{#if logged_In}}
+    <div>
+      <h1>Enjoy!</h1>
+    </div>
+
+
+  {{else}}
+  {{!-- <form class="float-left" id="logForm">
       <h1>Please login</h1>
       <a href="/signup">Create Account</a><hr>
   <div class="form-group">
@@ -19,57 +28,58 @@
   </div>
   <button type="submit" class="btn btn-primary login-form">Submit</button>
   {{!-- link a validation javascript --}}
-</form>
+</form> --}}
+{{/if}}
 
 <div class="container border border-secondary float-right col-6">
   <!-- Content here -->
   <h1>Scientific and Natural Areas</h1>
   {{!-- <p id="sna01013">Hemlock Ravine SNA</p> --}}
 </div>
-
+{{!-- removed disabled from the links --}}
 <section class="container border border-secondary float-right col-6 grid">
     <div>
-       <a  class="disabled-link" href="/api/dnr/sna01013">
+       <a  class="link" href="/api/dnr/sna01013">
         <button class="searchBtn btn-success my-2 myDIV" id="HemBtn" value="sna01013" >Hemlock Ravine SNA</button><img class="hide" src="/images/spk00187.jpg"><br>
        </a>
 
-       <a  class="disabled-link" href="/api/dnr/sna02000">
+       <a  class="link" href="/api/dnr/sna02000">
         <button class="searchBtn btn-success my-2 myDIV" id="ParkPointBtn" value="sna02000">Park Point SNA</button><img class="hide" src="/images/download (1).jpg"><br>
        </a>
        
-       <a  class="disabled-link" href="/api/dnr/snhttps://www.hawkria01017">
+       <a  class="link" href="/api/dnr/sna01017">
         <button class="searchBtn btn-success my-2 myDIV" id="MooseBtn" value="sna01017">Moose Mountain SNA</button><img class="hide" src="/images/download (2).jpg"><br>
         </a>
        
-        <a  class="disabled-link" href="/api/dnr/sna01000">
+        <a  class="link" href="/api/dnr/sna01000">
         <button class="searchBtn btn-success my-2 myDIV" id="IonaBtn" value="sna01000" >Iona's Beach SNA</button><img class="hide" src="/images/download.jpg"><br>
         </a>
         
-        <a  class="disabled-link" href="/api/dnr/sna01069">
+        <a  class="link" href="/api/dnr/sna01069">
         <button class="searchBtn btn-success my-2 myDIV" id="SugarloafBtn" value="sna01069" >Sugarloaf Point SNA</button><img class="hide" src="/images/image 2.jpg"><br>
         </a>
         
-        <a  class="disabled-link" href="/api/dnr/sna01070">
+        <a  class="link" href="/api/dnr/sna01070">
         <button class="searchBtn btn-success my-2 myDIV" id="LutsenBtn" value="sna01070" >Lutsen SNA</button><img class="hide" src="/images/images (1).jpg"><br>
         </a>
         
-        <a  class="disabled-link" href="/api/dnr/sna01013">
+        <a  class="link" href="/api/dnr/sna01013">
         <button class="searchBtn btn-success my-2 myDIV" id="MyhrBtn" value="sna02032" >Myhr Creek Ridge SNA</button><img class="hide" src="/images/images (2).jpg"><br>
         </a>
         
-        <a  class="disabled-link" href="/api/dnr/sna01042">
+        <a  class="link" href="/api/dnr/sna01042">
         <button class="searchBtn btn-success my-2 myDIV" id="SpringBtn" value="sna01042" >Spring Beauty Northern Hardwoods SNA</button><img class="hide" src="/images/images (3).jpg"><br>
         </a>
         
-        <a  class="disabled-link" href="/api/dnr/sna01045">
+        <a  class="link" href="/api/dnr/sna01045">
         <button class="searchBtn btn-success my-2 myDIV" id="ButterwortBtn" value="sna01045" >Butterwort Cliffs SNA</button><img class="hide" src="/images/images (4).jpg"><br>
         </a>
         
-        <a  class="disabled-link" href="/api/dnr/sna01047">
+        <a  class="link" href="/api/dnr/sna01047">
         <button class="searchBtn btn-success my-2 myDIV" id="HovlandBtn" value="sna01047" >Hovland Woods SNA</button><img class="hide" src="/images/images.jpg"><br>
         </a>
     </div>
 </section>
 </container>
 
-<script src="/login.js"></script>
+{{!-- <script src="/login.js"></script> --}}
