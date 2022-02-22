@@ -3,7 +3,7 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
     try {
     res.render('homepage', {
-       
+       loggedIn: req.session.loggedIn, 
       });
     } catch (err) {
       console.log(err);
@@ -15,11 +15,21 @@ router.get('/', async (req, res) => {
 
   router.get('/signup', (req, res) => {
     // If the user is already logged in, redirect to the homepage
+    // if (req.session.logged_In) {
+    //   res.redirect('/');
+    //   return;
+    // }
+    // Otherwise, render the 'login' template
+    res.render('signup');
+  });
+
+  router.get('/login', (req, res) => {
+    // If the user is already logged in, redirect to the homepage
     if (req.session.logged_In) {
       res.redirect('/');
       return;
     }
     // Otherwise, render the 'login' template
-    res.render('signup');
+    res.render('login');
   });
 module.exports = router;

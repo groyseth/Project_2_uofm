@@ -1,75 +1,76 @@
-{{!-- <div class='menu-container'>
-  <div class='card-header col-md-10'>
-    <h2>
-      DNR non belivers not welcome
-    </h2>
-  </div> --}}
-  <container class="hpContainer">
-  <form class="float-left">
-      <h1>Please login</h1>
-      <a href="/signup">Create Account</a><hr>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="username-input-login" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">You must create an accout before you can login.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="password-input-login">
-  </div>
-  <button type="submit" class="btn btn-primary login-form">Submit</button>
-  {{!-- link a validation javascript --}}
-</form>
+<section class="backOf">
 
-<div class="container border border-secondary float-right col-6">
-  <!-- Content here -->
-  <h1>Scientific and Natural Areas</h1>
-  {{!-- <p id="sna01013">Hemlock Ravine SNA</p> --}}
-</div>
 
-<section class="container border border-secondary float-right col-6 grid">
-    <div>
-       <a  class="disabled-link" href="/api/dnr/sna01013">
-        <button class="searchBtn btn-success my-2 myDIV" id="HemBtn" value="sna01013" >Hemlock Ravine SNA</button><img class="hide" src="/images/spk00187.jpg"><br>
-       </a>
 
-       <a  class="disabled-link" href="/api/dnr/sna02000">
-        <button class="searchBtn btn-success my-2 myDIV" id="ParkPointBtn" value="sna02000">Park Point SNA</button><img class="hide" src="/images/download (1).jpg"><br>
-       </a>
-       
-       <a  class="disabled-link" href="/api/dnr/snhttps://www.hawkria01017">
-        <button class="searchBtn btn-success my-2 myDIV" id="MooseBtn" value="sna01017">Moose Mountain SNA</button><img class="hide" src="/images/download (2).jpg"><br>
-        </a>
-       
-        <a  class="disabled-link" href="/api/dnr/sna01000">
-        <button class="searchBtn btn-success my-2 myDIV" id="IonaBtn" value="sna01000" >Iona's Beach SNA</button><img class="hide" src="/images/download.jpg"><br>
-        </a>
-        
-        <a  class="disabled-link" href="/api/dnr/sna01069">
-        <button class="searchBtn btn-success my-2 myDIV" id="SugarloafBtn" value="sna01069" >Sugarloaf Point SNA</button><img class="hide" src="/images/image 2.jpg"><br>
-        </a>
-        
-        <a  class="disabled-link" href="/api/dnr/sna01070">
-        <button class="searchBtn btn-success my-2 myDIV" id="LutsenBtn" value="sna01070" >Lutsen SNA</button><img class="hide" src="/images/images (1).jpg"><br>
-        </a>
-        
-        <a  class="disabled-link" href="/api/dnr/sna01013">
-        <button class="searchBtn btn-success my-2 myDIV" id="MyhrBtn" value="sna02032" >Myhr Creek Ridge SNA</button><img class="hide" src="/images/images (2).jpg"><br>
-        </a>
-        
-        <a  class="disabled-link" href="/api/dnr/sna01042">
-        <button class="searchBtn btn-success my-2 myDIV" id="SpringBtn" value="sna01042" >Spring Beauty Northern Hardwoods SNA</button><img class="hide" src="/images/images (3).jpg"><br>
-        </a>
-        
-        <a  class="disabled-link" href="/api/dnr/sna01045">
-        <button class="searchBtn btn-success my-2 myDIV" id="ButterwortBtn" value="sna01045" >Butterwort Cliffs SNA</button><img class="hide" src="/images/images (4).jpg"><br>
-        </a>
-        
-        <a  class="disabled-link" href="/api/dnr/sna01047">
-        <button class="searchBtn btn-success my-2 myDIV" id="HovlandBtn" value="sna01047" >Hovland Woods SNA</button><img class="hide" src="/images/images.jpg"><br>
-        </a>
+
+  <div class="container border border-secondary col-6 homeStyle">
+
+    <h1>Scientific and Natural Areas:</h1>
+    <div class="loginStyle">
+      {{#if loggedIn}}
+      <h1>Logged In!</h1>
+
+      {{else}}
+      <h1>Please Log In!</h1>
+      {{/if}}
     </div>
-</section>
-</container>
+  </div>
+  {{!-- removed disabled from the links --}}
 
-<script src="/login.js"></script>
+  <section class="container border border-secondary col-6 grid homeStyle">
+    <div>
+      <a class="link" href="/api/dnr/sna01013">
+        <button class="searchBtn btn-success my-2 myDIV" id="HemBtn" value="sna01013">Hemlock Ravine SNA</button><img
+          class="hide" src="/images/spk00187.jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna02000">
+        <button class="searchBtn btn-success my-2 myDIV" id="ParkPointBtn" value="sna02000">Park Point SNA</button><img
+          class="hide" src="/images/download (1).jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01017">
+        <button class="searchBtn btn-success my-2 myDIV" id="MooseBtn" value="sna01017">Moose Mountain SNA</button><img
+          class="hide" src="/images/download (2).jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01000">
+        <button class="searchBtn btn-success my-2 myDIV" id="IonaBtn" value="sna01000">Iona's Beach SNA</button><img
+          class="hide" src="/images/download.jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01069">
+        <button class="searchBtn btn-success my-2 myDIV" id="SugarloafBtn" value="sna01069">Sugarloaf Point
+          SNA</button><img class="hide" src="/images/image 2.jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01070">
+        <button class="searchBtn btn-success my-2 myDIV" id="LutsenBtn" value="sna01070">Lutsen SNA</button><img
+          class="hide" src="/images/images (1).jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01013">
+        <button class="searchBtn btn-success my-2 myDIV" id="MyhrBtn" value="sna02032">Myhr Creek Ridge SNA</button><img
+          class="hide" src="/images/images (2).jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01042">
+        <button class="searchBtn btn-success my-2 myDIV" id="SpringBtn" value="sna01042">Spring Beauty Northern
+          Hardwoods SNA</button><img class="hide" src="/images/images (3).jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01045">
+        <button class="searchBtn btn-success my-2 myDIV" id="ButterwortBtn" value="sna01045">Butterwort Cliffs
+          SNA</button><img class="hide" src="/images/images (4).jpg"><br>
+      </a>
+
+      <a class="link" href="/api/dnr/sna01047">
+        <button class="searchBtn btn-success my-2 myDIV" id="HovlandBtn" value="sna01047">Hovland Woods SNA</button><img
+          class="hide" src="/images/images.jpg"><br>
+      </a>
+    </div>
+  </section>
+</section>
+
+{{!--
+<script src="/login.js"></script> --}}
