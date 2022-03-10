@@ -41,7 +41,6 @@ GitHub link: https://github.com/Huss33/Project_2_uofm
 ## Roadmap
 
 - Improve functionality of adding and storing favorites.
-- Add notification of login/logout status.
 - Add more SNA's besides the ones we provied.
 - Improve UI/UX
 
